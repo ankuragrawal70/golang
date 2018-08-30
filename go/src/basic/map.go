@@ -16,6 +16,9 @@ func MapCheck(){
 	// always check ok here as 0 is a valid value
 	k, ok1 := a["1"]
 
+	if res, ok := a["1"]; ok {
+		fmt.Println(res)
+	}
 	
 	key, ok := a["0"]
 	fmt.Println(key, ok, k, ok1)

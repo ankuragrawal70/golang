@@ -2,6 +2,14 @@ package basic
 import "fmt"
 import "math"
 
+/*
+	Interfaces are the way to achieve polymorphism in golang.
+	Just forget about oops for a moment and think in interface manner.
+
+	Flexibility provided by interfaces comes from the fact that single type can implement many interfaces
+
+	or the same interface can be satisfied by many types
+*/
 type geometry interface {
 	area() float64
 	perim() float64

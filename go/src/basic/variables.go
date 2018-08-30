@@ -7,7 +7,7 @@ func All_variables(){
 	fmt.Println("variables are", i, b, x)
 
 
-	a, b := 20, 18
-	_b, c := 29, 10
+	// a, b := 20, false
+	// _b, c := 29, 10
 	
 }

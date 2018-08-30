@@ -21,3 +21,5 @@ func ArrayCheck(){
 	}
 	fmt.Println("successful", a, te)	
 }
+
+

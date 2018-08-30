@@ -1,7 +1,8 @@
 package main
 
 import (
-	"test"
+	// "test"
+	"basic"
 	)
 	
 
@@ -26,6 +27,7 @@ func main(){
 	// // basic.TestInterface()
 
 	// basic.TestGoRoutines()
-	// basic.TestChannel()
-	test.T()
+	basic.TestChannel()
+	// test.T()
+	
 }

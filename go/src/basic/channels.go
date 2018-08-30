@@ -54,17 +54,46 @@ func RangeClose(){
 }
 
 
+func fibonacciTest(c, quit chan int) {
+    x, y := 0, 1
+    for {
+        select {
+        case c <- x:
+            x, y = y, x+y
+        case <-quit:
+            fmt.Println("quit")
+            return
+        }
+    }
+}
+
+
+func sTest(c, quit chan int){
+	for i := 0; i < 10; i++ {
+		fmt.Println(<-c)
+	}
+	quit <- 0
+}
+
+func testSelectChannel(){
+	var c = make(chan int)
+	var quit = make(chan int)
+	go sTest(c, quit)
+	fibonacciTest(c, quit)
+}
+
+
 func TestChannel(){
-	arr := []int{10, 5, 12, 18, 18}
-	c := make(chan int)
+	// arr := []int{10, 5, 12, 18, 18}
+	// c := make(chan int)
 
-	go sum(arr[0:len(arr)/2], c)
-	go sum(arr[len(arr)/2:], c)
-	x, y := <-c, <-c
-	fmt.Println(x, y, x+y)
+	// go sum(arr[0:len(arr)/2], c)
+	// go sum(arr[len(arr)/2:], c)
+	// x, y := <-c, <-c
+	// fmt.Println(x, y, x+y)
 
-	bufferChannel()
-	RangeClose()
-	bufferChannelDeadlock()
-	
+	// bufferChannel()
+	// RangeClose()
+	// bufferChannelDeadlock()
+	testSelectChannel()
 }

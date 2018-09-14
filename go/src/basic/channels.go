@@ -1,5 +1,6 @@
 package basic
 import "fmt"
+
 /*
 default channels are unbuffered, meaning that 
 they will only accept sends (chan <-) if there 
@@ -8,6 +9,7 @@ receive the sent value. Buffered channels accept
 a limited number of values without a 
 corresponding receiver for those values.
 */
+
 func sum(arr []int, c chan int){
 	sum := 0
 	for _, v:= range arr{

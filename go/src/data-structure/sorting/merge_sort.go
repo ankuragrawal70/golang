@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package sorting
 
 func Merge(arr[] int, l, m, h int)  {
 	tmp_array_1 := make([]int, m-l+1)
@@ -49,10 +47,19 @@ func MergeSort(arr[] int, l, r int){
 	return
 }
 
-func main()  {
-	arr := [] int{1, 5, 3, 8, 9, 6, 12, 12, 89, 18, 14}
-	MergeSort(arr, 0, len(arr)-1)
-	fmt.Println(arr)
-}
+//func main()  {
+//	const cap = 10000000
+//	var arr [cap]int
+//	var initial_array = arr[:]
+//	for i:=0; i<cap; i++{
+//		initial_array[i] = rand.Intn(cap)
+//	}
+//	c_time := time.Now()
+//	// fmt.Println(initial_array)
+//	fmt.Println(c_time)
+//	MergeSort(initial_array, 0, len(initial_array)-1)
+//	e_time := time.Now()
+//	fmt.Println(e_time.Sub(c_time))
+//}
 
 

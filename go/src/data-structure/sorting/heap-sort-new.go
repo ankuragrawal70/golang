@@ -1,29 +1,25 @@
-package main
-
-import "fmt"
-import "time"
-import "math/rand"
-const cap = 10000000
-
-func main() {
-	var heap = new(Heap)
-
-	// heap.HeapSort(array)
-	var initial_array = make([]int, cap)
-	
-	for i:=0; i<cap; i++{
-		initial_array[i] = rand.Intn(cap)
-	}
-	// var array = []int{1, 7, 7, 9, 1, 8, 5, 0, 6, 0}
-	c_time := time.Now()
-	fmt.Println(c_time)
-	// fmt.Println("Initial array is", initial_array[0:len(initial_array)])
-	heap.HeapSort(initial_array)
-	e_time := time.Now()
-	fmt.Println(e_time.Sub(c_time))
+package sorting
 
 
-}
+//func main() {
+//	var heap = new(Heap)
+//
+//	// heap.HeapSort(array)
+//	var initial_array = make([]int, cap)
+//
+//	for i:=0; i<cap; i++{
+//		initial_array[i] = rand.Intn(cap)
+//	}
+//	// var array = []int{1, 7, 7, 9, 1, 8, 5, 0, 6, 0}
+//	c_time := time.Now()
+//	fmt.Println(c_time)
+//	// fmt.Println("Initial array is", initial_array[0:len(initial_array)])
+//	heap.HeapSort(initial_array)
+//	e_time := time.Now()
+//	fmt.Println(e_time.Sub(c_time))
+//
+//
+//}
 //All the code below here should go in another package
 type Heap struct {
 }

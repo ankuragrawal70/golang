@@ -1,11 +1,7 @@
-package main
-import "fmt"
-import "math/rand"
-import "time"
+package sorting
 // import "reflect"
 
 
-const cap = 10000000
 
 func heapifyDown(i int, arr []int){
 	// fmt.Println("in heapify", arr)
@@ -48,7 +44,7 @@ func createHeap(arr []int){
 	}
 }
 
-func heapSort(arr []int){
+func HeapSort(arr []int){
 	createHeap(arr)
 	// fmt.Println("after heap creation", arr)
 	l := len(arr)
@@ -61,20 +57,20 @@ func heapSort(arr []int){
 	}
 }
 
-func main(){
-	
-	var initial_array = make([]int, cap)
-	// cap := 100000
-	// var initial_array [cap]int
-	// var initial_array = arr[:]
-	for i:=0; i<cap; i++{
-		initial_array[i] = rand.Intn(cap)
-	}
-	c_time := time.Now()
-	fmt.Println(c_time)
-	// fmt.Println("Initial array is", initial_array[0:len(initial_array)])
-	heapSort(initial_array)
-	e_time := time.Now()
-	fmt.Println(e_time.Sub(c_time))
-	// fmt.Println("Final value is", initial_array)
-}
+//func main(){
+//
+//	var initial_array = make([]int, cap)
+//	// cap := 100000
+//	// var initial_array [cap]int
+//	// var initial_array = arr[:]
+//	for i:=0; i<cap; i++{
+//		initial_array[i] = rand.Intn(cap)
+//	}
+//	c_time := time.Now()
+//	fmt.Println(c_time)
+//	// fmt.Println("Initial array is", initial_array[0:len(initial_array)])
+//	heapSort(initial_array)
+//	e_time := time.Now()
+//	fmt.Println(e_time.Sub(c_time))
+//	// fmt.Println("Final value is", initial_array)
+//}

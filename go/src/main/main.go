@@ -1,10 +1,6 @@
 package main
 
-import (
-	// "test"
-	"basic"
-	)
-	
+import "basic"
 
 func main(){
 	// fmt.Println("check even", even.Test_even(10))
@@ -26,8 +22,9 @@ func main(){
 
 	// // basic.TestInterface()
 
-	// basic.TestGoRoutines()
-	basic.TestChannel()
+	//basic.TestGoRoutines()
+	//basic.TestChannel()
 	// test.T()
+	basic.TestConcurrency()
 	
 }
